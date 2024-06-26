@@ -34,38 +34,37 @@ body {
     margin-top: 1rem;
 }
 
+#search-input {
+    padding: .5em;
+}
+
 .content-category-button {
     margin-block: 1rem;
     padding: .5em 1em;
 }
 
 #pokedex-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-}
-
-@media (max-width: 640px) {
-    #pokedex-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 390px) {
-    #pokedex-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
-.pokedex-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
-    border-radius: .5em;
-    padding: 1em;
+}
 
-    > h2 {
-        font-size: clamp(1.25rem, 6vw, 1.75rem);
-    }
+.pokemon-type,
+.pokemon-second-type {
+    border: 1px solid white;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+/* POKEMON TYPE COLOR CHART */
+
+.grass-type {
+    background-color: hsl(166, 59%, 55%);
+}
+
+.poison-type {
+    background-color: rgb(100, 18, 100);
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1rem);
 }
