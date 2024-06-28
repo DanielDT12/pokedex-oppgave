@@ -24,7 +24,8 @@ body {
 #content-wrapper {
     max-width: 40rem;
     padding: 1rem;
-    border: 1px solid red;
+    border: 1px solid white;
+    border-radius: .5rem;
 }
 
 .content-categories {
@@ -53,6 +54,12 @@ body {
     border: 1px solid white;
     border-radius: .5rem;
     padding: .5rem;
+}
+
+.pokemon-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* POKEMON TYPE COLOR CHART */
