@@ -49,6 +49,124 @@ function makePokedexEntries(pokemonData) {
         pokedexContainer.appendChild(pokemonSecondType);
     }
 
+    switch(pokemonType.textContent) {
+        case "Grass":
+            pokemonType.classList.add("grass-type");
+            break;
+        case "Fire":
+            pokemonType.classList.add("fire-type");
+            break;
+        case "Water":
+            pokemonType.classList.add("-type");
+            break;
+        case "Electric":
+            pokemonType.classList.add("electric-type");
+            break;
+        case "Normal":
+            pokemonType.classList.add("normal-type");
+            break;
+        case "Ice":
+            pokemonType.classList.add("ice-type");
+            break;
+        case "Fighting":
+            pokemonType.classList.add("fighting-type");
+            break;
+        case "Poison":
+            pokemonType.classList.add("poison-type");
+            break;
+        case "Ground":
+            pokemonType.classList.add("ground-type");
+            break;
+        case "Flying":
+            pokemonType.classList.add("flying-type");
+            break;
+        case "Psychic":
+            pokemonType.classList.add("psychic-type");
+            break;
+        case "Bug":
+            pokemonType.classList.add("bug-type");
+            break;
+        case "Rock":
+            pokemonType.classList.add("rock-type");
+            break;
+        case "Ghost":
+            pokemonType.classList.add("ghost-type");
+            break;
+        case "Dragon":
+            pokemonType.classList.add("dragon-type");
+            break;
+        case "Dark":
+            pokemonType.classList.add("dark-type");
+            break;
+        case "Steel":
+            pokemonType.classList.add("steel-type");
+            break;
+        case "Fairy":
+            pokemonType.classList.add("fairy-type");
+            break;
+        default:
+            console.log("Type not found or something went wrong.");
+    }
+
+    switch(pokemonSecondType.textContent) {
+        case "Grass":
+            pokemonSecondType.classList.add("grass-type");
+            break;
+        case "Fire":
+            pokemonSecondType.classList.add("fire-type");
+            break;
+        case "Water":
+            pokemonSecondType.classList.add("-type");
+            break;
+        case "Electric":
+            pokemonSecondType.classList.add("electric-type");
+            break;
+        case "Normal":
+            pokemonSecondType.classList.add("normal-type");
+            break;
+        case "Ice":
+            pokemonSecondType.classList.add("ice-type");
+            break;
+        case "Fighting":
+            pokemonSecondType.classList.add("fighting-type");
+            break;
+        case "Poison":
+            pokemonSecondType.classList.add("poison-type");
+            break;
+        case "Ground":
+            pokemonSecondType.classList.add("ground-type");
+            break;
+        case "Flying":
+            pokemonSecondType.classList.add("flying-type");
+            break;
+        case "Psychic":
+            pokemonSecondType.classList.add("psychic-type");
+            break;
+        case "Bug":
+            pokemonSecondType.classList.add("bug-type");
+            break;
+        case "Rock":
+            pokemonSecondType.classList.add("rock-type");
+            break;
+        case "Ghost":
+            pokemonSecondType.classList.add("ghost-type");
+            break;
+        case "Dragon":
+            pokemonSecondType.classList.add("dragon-type");
+            break;
+        case "Dark":
+            pokemonSecondType.classList.add("dark-type");
+            break;
+        case "Steel":
+            pokemonSecondType.classList.add("steel-type");
+            break;
+        case "Fairy":
+            pokemonSecondType.classList.add("fairy-type");
+            break;
+        default:
+            console.log("Type not found or something went wrong.");
+    }
+
     const pokemonSprite = document.createElement("img");
     pokemonSprite.src = pokemonData.sprites.front_default;
     pokemonSprite.alt = pokemonData.name
@@ -56,7 +174,6 @@ function makePokedexEntries(pokemonData) {
 
     const pokemonStatNameArray = pokemonData.stats.map((statName) => statName.stat.name);
     const pokemonStatNumberArray = pokemonData.stats.map((statNumber) => statNumber.base_stat);
-    
     
     for (let i = 0; i < pokemonStatNameArray.length; i++) {
         const pokemonStatContainer = document.createElement("div");
