@@ -50,8 +50,24 @@ function makePokedexEntries(pokemonData) {
     }
 
     const pokemonSprite = document.createElement("img");
-    const pokemonShinySprite = document.createElement("img");
     pokemonSprite.src = pokemonData.sprites.front_default;
     pokemonSprite.alt = pokemonData.name
     pokedexContainer.appendChild(pokemonSprite);
+
+    const pokemonStatNameArray = pokemonData.stats.map((statName) => statName.stat.name);
+    const pokemonStatNumberArray = pokemonData.stats.map((statNumber) => statNumber.base_stat);
+    
+    
+    for (let i = 0; i < pokemonStatNameArray.length; i++) {
+        const pokemonStatContainer = document.createElement("div");
+        const pokemonStatName = document.createElement("p");
+        const pokemonStatNumber = document.createElement("p");
+        pokemonStatContainer.classList.add("pokemon-stats");
+
+        pokemonStatName.textContent = `${pokemonStatNameArray[i].charAt(0).toUpperCase() + pokemonStatNameArray[i].slice(1)} :`;
+        pokemonStatNumber.textContent = `${pokemonStatNumberArray[i]}`;
+        pokemonStatContainer.appendChild(pokemonStatName);
+        pokemonStatContainer.appendChild(pokemonStatNumber);
+        pokedexContainer.appendChild(pokemonStatContainer);
+    }
 }
