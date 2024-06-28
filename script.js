@@ -14,7 +14,7 @@ async function getPokemonData(pokeName) {
             throw new Error("Network did not respond with HTTP code 200");
         }
 
-        console.log(pokemonData);
+        // console.log(pokemonData); display, JSON object in console.
         makePokedexEntries(pokemonData);
     } catch (error) {
         console.error("Error fetching Pokemon data from API: ", error);
